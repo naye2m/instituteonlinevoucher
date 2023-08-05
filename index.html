@@ -1,11 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- http://127.0.0.1:5501/index.html?product=shirt&color=blue&newuser&size=m -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
     <title>Your Online Voucher</title>
 </head>
+
 <body>
-    blanks
+    <div id="v" class="id_v vmain">
+        <div class="v-secondary"> <img class="top_logo" src="
+         data:image/png;base64,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
+         " alt="top logo" width="" height="" />
+            <ul>
+                <li class="copyOF">hi</li>
+            </ul>
+            <h1 class="zin2" style="padding-top: 20pt;text-indent: 0pt; text-align: center;">C<span style="color: #080;">i</span>tizen
+                <span style="color: #f00;">I</span><span style="color: #080;">T </span>Solu<span
+                    style="color: #f00;">t</span>ion</h1>
+            <p class="zin2" style="text-indent: 0pt; text-align: left;">&nbsp;</p>
+            <p class="zin2"
+                style="padding-top: 0pt; padding-left: 0pt; text-indent: 0pt; line-height: 10pt; text-align: center;">
+                Address : Upazila Sadar Road (Ward#01), Nesarabad (Swarupkati), Pirojpur</p>
+            <p class="zin2" style="padding-left: 0pt; text-indent: 0pt; line-height: 11pt; text-align: center;"><span
+                    style="color: #00f; font-family: 1Times New Roman\', serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10pt;">citizenit.bd@gmail.com</span>
+                <a style="color: black; font-family: 1Times New Roman\', serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt;"
+                    href="http://www.citizenit.com.bd/" target="_blank">| </a><a href="http://www.citizenit.com.bd/"
+                    target="_blank">www.citizenit.com.bd</a></p>
+            <p class="zin2" style="padding-left: 0pt; text-indent: 0pt; text-align: center;">Contact : +88 01788- 710701
+                ( Office ) | Contact : +88 01556 - 554208 ( Office )</p>
+            <h3 class="zin2" style="padding-top: 3pt; padding-left: 0pt; text-indent: 0pt; text-align: center;">Our
+                Services<span class="s7">:</span></h3>
+            <p class="zin2"
+                style="padding-top: 5pt; padding-left: 62pt; text-indent: 0pt; line-height: 164%; text-align: center;">
+                &nbsp;</p>
+            <ul>
+                <li>
+                    <p class="s14 nameDiv"
+                        style="padding-top: 11pt; padding-left: 16pt; text-indent: 0pt; text-align: left;"> <span
+                            class="h4">Mr. </span><span class="s15">.</span></p>
+                </li>
+            </ul>
+            <table class="table-1">
+                <thead>
+                    <tr>
+                        <td>sirial</td>
+                        <td>Description</td>
+                        <td>Qty.</td>
+                        <td>Warranty</td>
+                        <td>Total Price</td>
+                    </tr>
+                </thead>
+                <tbody class="nUnibg"></tbody>
+                <tfoot>
+                    <tr>
+                        <td id="td34" class="QRSTD" colspan="3" rowspan="4">
+                            <div id="qrcode-container" class="QRScon"><canvas id="qrcode" class="QRS"></canvas> </div>
+                        </td>
+                        <td>subtotal</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>less no less</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Grand Total</td>
+                        <td class="double-underline">&nbsp;</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br />
+            <footer>
+                <div id="sigArea" class="s29 sigarea">
+                    <p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;<br />Customer</p>
+                    <p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;<br />Co-Ordinator</p>
+                    <p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;<br />Authority</p>
+                </div>
+            </footer>
+        </div>
+        <!-- <div class="v-in">&nbsp;</div>
+        <div class="v-secondary">hijjjjjjjjjjjjlajfajjjjjjjjjjjjjjjjjjjjjjjjjjnnaladjjjjjjjjjjjjjjjjjjjjjjjjttaklfjalj
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
