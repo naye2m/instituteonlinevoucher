@@ -14,7 +14,12 @@
 #dd6e42 // #e8dab2 // #4f6d7a // #c0d6df // #eaeaea
 #f79256 // #fbd1a2 // #7dcfb6 // #00b2ca // #1d4e89
 #03045e // #0077b6 // #00b4d8 // #90e0ef // #caf0f8 */
-
+@font-face {
+  font-family: sutonnyOMJban;
+  /* src: url(fonts\SutonnyOMJ.ttf) format("opentype"); */
+  src: local(sutonnyOMJ);
+  unicode-range: U+0981-0983, U+0985-098C, U+098F-0990, U+0993-09A8, U+09AA-09B0, U+09B2, U+09B6-09B9, U+09BC, U+09BE-09C4, U+09C7-09C8, U+09CB-09CD, U+09D7, U+09DC-09DD, U+09DF-09E3, U+09E6-09FA;
+}
 html,
 body {
   margin: 0;
