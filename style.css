@@ -18,7 +18,7 @@
   font-family: sutonnyOMJban;
   /* src: url(fonts\SutonnyOMJ.ttf) format("opentype"); */
   src: local(sutonnyOMJ);
-  unicode-range: U+0981-0983, U+0985-098C, U+098F-0990, U+0993-09A8, U+09AA-09B0, U+09B2, U+09B6-09B9, U+09BC, U+09BE-09C4, U+09C7-09C8, U+09CB-09CD, U+09D7, U+09DC-09DD, U+09DF-09E3, U+09E6-09FA;
+  unicode-range: U+0981-0983, U+007C, U+0985-098C, U+098F-0990, U+0993-09A8, U+09AA-09B0, U+09B2, U+09B6-09B9, U+09BC, U+09BE-09C4, U+09C7-09C8, U+09CB-09CD, U+09D7, U+09DC-09DD, U+09DF-09E3, U+09E6-09FA;
 }
 html,
 body {
@@ -67,8 +67,7 @@ body {
   position: relative;
   /* width: calc(50% - 0pt); */
   /* max-width: calc(50% - 10pt); */
-  margin: 0 25vw;
-  padding: 0 2vw;
+
   box-sizing: border-box;
   background-color: #fff;
   border: #ffffff 1pt solid;
@@ -78,9 +77,20 @@ body {
   text-align: center;
   overflow: hidden;
   display: flexbox;
-
+  /* hi */
+  @media screen and (orientation:portrait) {
+    /* Portrait styles */
+  }
+  
+  /* Landscape */
+  @media screen and (orientation:landscape) {
+    /* Landscape styles */
+    margin: 0 25vw;
+    padding: 0 2vw;
+  }
   /* display: inline-flexbox; */
 }
+
 
 /* #v{
       position: absolute;
