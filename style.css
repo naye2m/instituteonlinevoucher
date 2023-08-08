@@ -63,6 +63,7 @@ body {
   /* display: flex !important; */
 }
 
+
 .v-secondary {
   position: relative;
   /* width: calc(50% - 0pt); */
@@ -75,7 +76,7 @@ body {
   flex-grow: 1;
   align-items: center;
   text-align: center;
-  overflow: hidden;
+  overflow: scroll;
   display: flexbox;
   /* hi */
   @media screen and (orientation:portrait) {
@@ -85,19 +86,20 @@ body {
   /* Landscape */
   @media screen and (orientation:landscape) {
     /* Landscape styles */
-    margin: 0 25vw;
+    margin: 0 calc(50dvw  - 252px);
     padding: 0 2vw;
+    min-width: 504px;
   }
   /* display: inline-flexbox; */
 }
 
 
-/* #v{
+#v{
       position: absolute;
-      width: 0vw;
-      height: 0vh;
+      /* width: 0vw;
+      height: 0vh; */
       
-    } */
+    }
 .copyOF {
   float: right;
   height: 0;

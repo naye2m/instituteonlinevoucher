@@ -570,7 +570,7 @@ if (queryString && urlParams.get('id')) {
             // nm.items.map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4]))//iff arr
             // Object.values(nm).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4]))//?iff Obj
             console.log(Object.values(nm.items).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4])))
-            
+            document.getElementById("loader").style.display = "none";
         }
     
     if (!queryString || !urlParams.get('id')) {
