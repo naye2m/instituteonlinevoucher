@@ -1,10 +1,9 @@
-console.log("   _______ __  _                    __________   \r\n  / ____(_) /_(_)___ ___  ____     /  _/_  __/   \r\n / /   / / __/ /_  // _ \\/ __ \\    / /  / /      \r\n/ /___/ / /_/ / / //  __/ / / /  _/ /  / /       \r\n\\____/_/\\__/_/ /___|___/_/ /_/  /___/ /_/        \r\n   _________  / /_  __/ /_(_)___  ____  _____    \r\n  / ___/ __ \\/ / / / / __/ / __ \\/ __ \\/ ___/    \r\n (__  ) /_/ / / /_/ / /_/ / /_/ / / / (__  )     \r\n/____/\\____/_/\\__,_/\\__/_/\\____/_/ /_/____/\r\n                                              -@naye2m\r\nCopyright © 2012 - 2023 Citizen IT® solutions. All rights reserved."); // turn fist on DIPLOY
 var presentCustomer;
 var t1, t2, t3, t4, pCust;
 
 function ValidateEmail(inp) {
     return inp;
-    return inp.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? inp : ValidateEmail(confirm("wanna give a valid mail?") ? prompt("Please enter a valid email address", "citizenit.bd+customer@gmail.com") : "citizenit.bd+customer@gmail.com");
+    return inp.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? inp : ValidateEmail(confirm("wanna give a valid mail?") ? prompt("Please enter a valid email address", "institute.bd+customer@gmail.com") : "institute.bd+customer@gmail.com");
 }
 
 function Customer(name, emailAdd = "", address = "", buyingFor = 'Customer', invoiceNumber = "", phone = 0, _discountAmount = 0) {
@@ -372,7 +371,7 @@ function newItem(name, price, qty, itemSirialNo) {
 //         }, err => console.error("logjson", err))
 //         .then(response => {
 //             //QR DATA
-//             generateQRCode(`https://naye2m.github.io/citizenitonlinevoucher/?id=${tmpSRes.resDat[0]}&row=${tmpSRes.cRow}&me=qr&v=1#hi`); 
+//             generateQRCode(`https://naye2m.github.io/instituteonlinevoucher/?id=${tmpSRes.resDat[0]}&row=${tmpSRes.cRow}&me=qr&v=1#hi`); 
 //             //alert
 //             alert(JSON.stringify(tmpSRes));
 //             //print
@@ -540,7 +539,7 @@ function addCust() {
 // main();
 // ////////////////////////////////
 
-var ASurl = "https://script.google.com/macros/s/AKfycbz-BEBi7AgLb7HzDkuDwa8nmkW9w54aJc_NPYhFtGi_U2nYDD7jsSL5iMiqPXpPGuDq/exec", serRes;
+var ASurl = "https://script.google.com/macros/s/AKfycbze6hvJ-WeDBno4ecCx8B0NG5iYPIoNoEnBH5NtrBqEpZB9O6p7KMI8wLUhbU7vA-gt/exec", serRes;
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
