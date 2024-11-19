@@ -1,6 +1,6 @@
 var presentCustomer;
 var t1, t2, t3, t4, pCust;
-
+var Is_Demo = new URLSearchParams(window.location.search).get("demo").toLowerCase() == 'true';
 function ValidateEmail(inp) {
     return inp;
     return inp.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? inp : ValidateEmail(confirm("wanna give a valid mail?") ? prompt("Please enter a valid email address", "institute.bd+customer@gmail.com") : "institute.bd+customer@gmail.com");
