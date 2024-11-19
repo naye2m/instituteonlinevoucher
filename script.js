@@ -2,7 +2,7 @@ var presentCustomer;
 var t1, t2, t3, t4, pCust;
 var Is_Demo = new URLSearchParams(window.location.search).get("demo")?.toLowerCase() == 'true';
 if (Is_Demo)
-    window.location.replace("?id=1yTMWNcUFxiOmtwhq5EvHvyegh358bDcw&row=273&me=qr&v=1");
+    window.location.replace("?id=1r655P4ooSv2T5uDyJ8JBhtdi2bDdJ0ik&inv=NAY275241119&row=274&me=em");
 function ValidateEmail(inp) {
     return inp;
     return inp.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? inp : ValidateEmail(confirm("wanna give a valid mail?") ? prompt("Please enter a valid email address", "institute.bd+customer@gmail.com") : "institute.bd+customer@gmail.com");
