@@ -541,7 +541,7 @@ tbody {
   } */
   /* opacity: 0.1 ; */
   &.nUnibg {
-    background-image: url("/images/weblogo.png");
+    background-image: url("./images/weblogo.png");
     background-color: #fff;
     /* Used if the image is unavailable */
     /* height: 500px; /*You must set a specified height */
