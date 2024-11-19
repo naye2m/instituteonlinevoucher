@@ -1,6 +1,8 @@
 var presentCustomer;
 var t1, t2, t3, t4, pCust;
-var Is_Demo = new URLSearchParams(window.location.search).get("demo").toLowerCase() == 'true';
+var Is_Demo = new URLSearchParams(window.location.search).get("demo")?.toLowerCase() == 'true';
+if (Is_Demo)
+    window.location.replace("?id=1yTMWNcUFxiOmtwhq5EvHvyegh358bDcw&row=273&me=qr&v=1");
 function ValidateEmail(inp) {
     return inp;
     return inp.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? inp : ValidateEmail(confirm("wanna give a valid mail?") ? prompt("Please enter a valid email address", "institute.bd+customer@gmail.com") : "institute.bd+customer@gmail.com");
@@ -562,19 +564,19 @@ if (queryString && urlParams.get('id')) {
             // window.location.search = '';
             printONdoc(serRes);
         })
-    }
-        function printONdoc(nm) {
-            var nn = new Customer(nm.name, nm.emailAdd, nm.address, nm.buyingFor, nm.invoiceNumber, nm.phone, nm._discountAmount);
-            presentCustomer.items = {};
-            // nm.items.map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4]))//iff arr
-            // Object.values(nm).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4]))//?iff Obj
-            console.log(Object.values(nm.items).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4])))
-            document.getElementById("loader").style.display = "none";
-        }
-    
-    if (!queryString || !urlParams.get('id')) {
-        document.body.innerHTML = "<p style=' font-family: sutonnyOMJban, \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;position: fixed;font-size: 32pt;bottom: 50%;display: contents;padding: 50vh;'>Scan correct QR Code</br>Error: Cant find <strong>Id</strong>entification</p>";
-    }
+}
+function printONdoc(nm) {
+    var nn = new Customer(nm.name, nm.emailAdd, nm.address, nm.buyingFor, nm.invoiceNumber, nm.phone, nm._discountAmount);
+    presentCustomer.items = {};
+    // nm.items.map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4]))//iff arr
+    // Object.values(nm).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4]))//?iff Obj
+    console.log(Object.values(nm.items).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4])))
+    document.getElementById("loader").style.display = "none";
+}
+
+if (!queryString || !urlParams.get('id')) {
+    document.body.innerHTML = "<p style=' font-family: sutonnyOMJban, \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;position: fixed;font-size: 32pt;bottom: 50%;display: contents;padding: 50vh;'>Scan correct QR Code</br>Error: Cant find <strong>Id</strong>entification</p>";
+}
 // const color = urlParams.get('color')
 // console.log(color);
 // // blue
