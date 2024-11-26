@@ -1,8 +1,7 @@
 var presentCustomer;
 var t1, t2, t3, t4, pCust;
-var Is_Demo = new URLSearchParams(window.location.search).get("demo")?.toLowerCase() == 'true';
-if (Is_Demo)
-    window.location.replace("?id=1r655P4ooSv2T5uDyJ8JBhtdi2bDdJ0ik&inv=NAY275241119&row=274&me=em");
+
+
 function ValidateEmail(inp) {
     return inp;
     return inp.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ? inp : ValidateEmail(confirm("wanna give a valid mail?") ? prompt("Please enter a valid email address", "institute.bd+customer@gmail.com") : "institute.bd+customer@gmail.com");
@@ -305,23 +304,6 @@ function newItem(name, price, qty, itemSirialNo) {
 
     presentCustomer.addItem(this.name, this.price, this.qty);
 }
-
-// // todo this should be hidden ++ APP Script
-// //** */ // const deplymentID = AKfycbxJ9vxbdHSoMvhr9ahLPbkdqerSsJF-IwtMQg2RnFWznx6OetZKLkJVhJhVeP3xqgUU
-// //** var scriptURL = 'https://script.google.com/macros/s/AKfycbxJ9vxbdHSoMvhr9ahLPbkdqerSsJF-IwtMQg2RnFWznx6OetZKLkJVhJhVeP3xqgUU/exec'
-// //** const deplymentID = AKfycbwwpudyHgrwpPmM7qS2nC0xa2TsuKs1UVWEwdrpOnsWNxW48dFPadxfVyagnBrGdjSk
-// //** var scriptURL = 'https://script.google.com/macros/s/AKfycbwwpudyHgrwpPmM7qS2nC0xa2TsuKs1UVWEwdrpOnsWNxW48dFPadxfVyagnBrGdjSk/exec'//2nd deployment
-// //** var scriptURL = 'https://script.google.com/macros/s/AKfycbwNZNyairQJqPfaydWe6RjvarBgYDX3isggiSSByRd0RZVxznkUYO8IkIUAVwC1_TM/exec'//3rd deployment
-// //** var scriptURL = 'https://script.google.com/macros/s/AKfycbxBx4pqfK2TQtxPc9y0oon6jMnf2Z3eW4Nr8Z-4Rh213lkf-_YR4S4MlHxwCktDcSBk/exec' //4th deployment
-// //  var scriptURL = 'https://script.google.com/macros/s/AKfycbwuuHmci7IXs2yZznsTOA37hduR7fAoa2aPXn-r57yvMuNlX5f7erdJs-4jmhqOZ-Co/exec' //5th deployment
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycbxwov6MHoQWX-yAbJlDfEFvSm8ZrMAaWsrvWuoh3Pk/exec' //test
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycbzzHC0dZ3GGbN_uVdfgmyvz9D8hpJAssbUMyM_rs7JWkuSMvopzMKlx0ItetgXIfVYd/exec' //bww3
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycby2BEVxlMQ55AMGe6OaSxE1EthVsOBnbqdqJoveUIo20zCMXqOKAh_LpuWHhGG1DqRW/exec' //beta wish final
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycbxe6yiMKiDYfhmh9OwCyqJ9Z9Or4_JzShfK4bmRPnWTt2-yZ0I2JAD68SzBkyYI2KjJ/exec' //beta 1 deployment 😙
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycbwVmBDq5ymZXacyfRkBD0C_Pyokmcg1rIQY2lHXI_wi9nEBOhM6tUrwIqmaUjy7OyNp/exec'//v2 1st deployment
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycbyLPYi2-4ZA9p3un3dJZolmhrScSQgHT8OWmzMXie6WtN9x_exX34w52cLa-EzAjlQ/exec' //v10 beta final version
-// // var scriptURL = 'https://script.google.com/macros/s/AKfycbxXRO2nzNnNBSeUw1y__T145fupfxTwzN_2RunC2El0rtyQep7OZ1BaJ1Be2Kam7eyO/exec'// desabled mail v11
-// var scriptURL = 'https://script.google.com/macros/s/AKfycby9o566JsLPDNXV7NKGPbPlyWs5S9DGIxp4B-DIA3WRna1g6xiHqMLBnPswgHyAZW_W/exec'// With mail🤠 v12
 // const fetchingForm = rawDataForm; //?? make it constant
 // // const fetchingForm = document.forms['formName']
 // fetchingForm.addEventListener('submit', e => {
@@ -493,61 +475,17 @@ function addCust() {
         return false;
     }
 }
-// function loadSecPage() {
-//     document.getElementById("custInp1").classList.add("hide")
 
-// }
-
-// function loadpage(inp) {
-
-//     switch (inp) {
-//         case 2:
-//             document.getElementById("custInp1").classList.add("hide");
-//             document.getElementById("custInp2").classList.remove("hide");
-//             document.getElementById("custInp3").classList.add("hide");
-//             document.getElementById("cp2in").innerHTML = `<span>Name:${presentCustomer.name} </span><span>Address: ${presentCustomer.address}</span><span>E-mail: ${presentCustomer.emailAdd}</span><span>Phone: ${presentCustomer.phone}</span>`
-//             // appendChild(document.createElement("span").textContent(`Name: ${pCust.name}`));
-//             break;
-//         case 3:
-//             document.getElementById("custInp1").classList.add("hide");
-//             document.getElementById("custInp2").classList.add("hide");
-//             document.getElementById("custInp3").classList.remove("hide");
-//             break;
-//         case 1:
-//         // pCust = new Customer();
-//         default:
-//             document.getElementById("custInp1").classList.remove("hide");
-//             document.getElementById("custInp2").classList.add("hide");
-//             document.getElementById("custInp3").classList.add("hide");
-//             break;
-//     }
-// }
-// //** /////////// HTML    END///////////////////
-// ////////////////////////////////
-// ////////////////////////////////
-// function main() {
-//     // presentCustomer.final();
-//     loadpage(1);
-// }
-// // ??// nayem.createTbl() dont uncomment this line;
-// // presentCustomer.final();
-
-// // tmp household
-// //**  t1 = [], t2 = [];
-// //**  for (const key in t3) {
-// //**      t1.push(t3[key]);
-// //**      t2.push(key);
-// //**  }
-// main();
-// ////////////////////////////////
-
-var ASurl = "https://script.google.com/macros/s/AKfycbze6hvJ-WeDBno4ecCx8B0NG5iYPIoNoEnBH5NtrBqEpZB9O6p7KMI8wLUhbU7vA-gt/exec", serRes;
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get('product')
 // console.log(product);
 // // shirt
+function printToPage(){
+// loading printpage
+const ASurl = "https://script.google.com/macros/s/AKfycbyuQK9UNNjKpz-9SjvWB4KNeaCM1jF-coKq9AQiIDcwMhjTst26jl2m8aFtjQLNYE2f/exec"; // Super (fixed online validation) v16
+var serRes;
 if (queryString && urlParams.get('id')) {
     fetch(ASurl + queryString)
         .then((response) => response.json())
@@ -573,56 +511,16 @@ function printONdoc(nm) {
     console.log(Object.values(nm.items).map(e => presentCustomer.addItem(e[1], e[2], e[5], e[3], e[4])))
     document.getElementById("loader").style.display = "none";
 }
-
+}
 if (!queryString || !urlParams.get('id')) {
     document.body.innerHTML = "<p style=' font-family: sutonnyOMJban, \"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", sans-serif;position: fixed;font-size: 32pt;bottom: 50%;display: contents;padding: 50vh;'>Scan correct QR Code</br>Error: Cant find <strong>Id</strong>entification</p>";
 }
-// const color = urlParams.get('color')
-// console.log(color);
-// // blue
 
-// const newUser = urlParams.get('newuser')
-// console.log(newUser);
-// // empty string
-// console.log(urlParams.has('product'));
-// // true
+printToPage();
 
-// console.log(urlParams.has('paymentmethod'));
-// // false
-// console.log(urlParams.getAll('size'));
-// // [ 'm' ]
+// check if demo page to show
+var Is_Demo = new URLSearchParams(window.location.search).get("demo")?.toLowerCase() == 'true';
+if (Is_Demo)
+    window.location.replace("?id=1r655P4ooSv2T5uDyJ8JBhtdi2bDdJ0ik&inv=NAY275241119&row=274&me=em");
+// end demo
 
-// //Programmatically add a second size parameter.
-//!! urlParams.append('size', 'xl');
-
-// console.log(urlParams.getAll('size'));
-// // [ 'm', 'xl' ]
-// keys = urlParams.keys(),
-//     values = urlParams.values(),
-//     entries = urlParams.entries();
-
-// for (const key of keys) console.log(key);
-// // product, color, newuser, size
-
-// for (const value of values) console.log(value);
-// // shirt, blue, , m
-
-// for (const entry of entries) {
-//     console.log(`${entry[0]}: ${entry[1]}`);
-// }
-// product: shirt
-// color: blue
-// newuser:
-// size: m
-var nayem2 = new Customer('nayem2', "dfsx@fh.com", 'dhaka', 'Customer', '1001', '+01645545465', 1100);
-nayem2.addItem("fkjakds", 'm', '1year', 1300, 5);
-nayem2.addItem('b', 'n', '1year', 1500, 6);
-var nayem = new Customer('nayem', "sfa@il.com", 'dhaka', 'Customer', '1001', '+01645545465', 1100);
-nayem.addItem("fja", 'm', '1year', 1300, 5);
-nayem.addItem('b', 'n', '1year', 1500, 6);
-nayem.addItem('c', 'o', '1year', 1000, 2);
-nayem.addItem('d', 'p', '1year', 1200, 3);
-nayem.addItem("f0ja", 'm', '1year', 1300, 5);
-nayem.addItem('b0', 'n', '1year', 1500, 6);
-nayem.addItem('c0', 'o', '1year', 1000, 2);
-nayem.addItem('d0', 'p', '1year', 1200, 3);
