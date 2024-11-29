@@ -20,6 +20,7 @@
   src: local(sutonnyOMJ);
   unicode-range: U+0981-0983, U+007C, U+0985-098C, U+098F-0990, U+0993-09A8, U+09AA-09B0, U+09B2, U+09B6-09B9, U+09BC, U+09BE-09C4, U+09C7-09C8, U+09CB-09CD, U+09D7, U+09DC-09DD, U+09DF-09E3, U+09E6-09FA;
 }
+
 html,
 body {
   margin: 0;
@@ -65,6 +66,7 @@ body {
 
 
 .v-secondary {
+  scrollbar-width: none;
   position: relative;
   /* width: calc(50% - 0pt); */
   /* max-width: calc(50% - 10pt); */
@@ -78,28 +80,31 @@ body {
   text-align: center;
   overflow: scroll;
   display: flexbox;
+
   /* hi */
   @media screen and (orientation:portrait) {
     /* Portrait styles */
   }
-  
+
   /* Landscape */
   @media screen and (orientation:landscape) {
     /* Landscape styles */
-    margin: 0 calc(50dvw  - 252px);
+    margin: 0 calc(50dvw - 252px);
     padding: 0 2vw;
     min-width: 504px;
   }
+
   /* display: inline-flexbox; */
 }
 
 
-#v{
-      position: absolute;
-      /* width: 0vw;
+#v {
+  position: absolute;
+  /* width: 0vw;
       height: 0vh; */
-      
-    }
+
+}
+
 .copyOF {
   float: right;
   height: 0;
@@ -112,9 +117,9 @@ body {
   height: 0;
   position: absolute;
   /* right: 12pt; */
-  font-size: 12pt;
+  font-size: 8pt;
   top: 20pt;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .v-in {
@@ -505,22 +510,7 @@ thead td {
 }
 
 /* t */
-td {
-  border: solid 1pt;
-  /* border: #aaa 1pt solid;  
-    border-collapse: collapse;
-    margin: 0 ;
-    padding: 0;
-    vertical-align: top; */
-  vertical-align: baseline;
-  min-width: fit-content;
 
-  font-size: 12pt;
-  /*
-    font-family: sutonnyOMJban, "Times New Roman", serif;
-    font-style: normal;
-    font-weight: normal; */
-}
 
 .xx-small {
   font-size: xx-small;
@@ -541,18 +531,13 @@ tbody {
   } */
   /* opacity: 0.1 ; */
   &.nUnibg {
-    background-image: url("./images/weblogo.png");
-    background-color: #fff;
-    /* Used if the image is unavailable */
-    /* height: 500px; /*You must set a specified height */
+    text-shadow: 0 0 0px #ffffff;
+    background-image: url(./images/weblogo.png);
+    background-blend-mode: lighten;
+    background-color: #FFFB;
     background-position: center;
-    /* Center the image */
     background-repeat: no-repeat;
-    /* Do not repeat the image */
     background-size: 82%;
-    /* Resize the background image to cover the entire container */
-    /* background-size: cover; /* Resize the background image to cover the entire container */
-
   }
 }
 
@@ -572,11 +557,24 @@ text-align: center;
 width: 100pt;
 } */
 body td {
+  border: solid 1pt;
+  /* border: #aaa 1pt solid;  
+      border-collapse: collapse;
+      margin: 0 ;
+      padding: 0;
+      vertical-align: top; */
+  vertical-align: baseline;
+  min-width: fit-content;
+  padding: 0 3pt;
+
+  /*
+      font-family: sutonnyOMJban, "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal; */
   font-family: sutonnyOMJban, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
     "Courier New", Courier, monospace;
-  font-size: 12pt;
-  padding: 0;
+  font-size: 11pt;
   margin: 0;
   opacity: 1;
 }

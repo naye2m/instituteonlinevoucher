@@ -26,7 +26,7 @@ function Customer(name, emailAdd = "", address = "", buyingFor = 'Customer', inv
     this.subtotal = 0;
     // this.qrjs = null; 
     this.phone = phone;
-    nameEle[0].innerHTML = `<p class="s14" style="padding-top: 11pt;padding-left: 16pt;text-indent: 0pt;text-align: left;">${this.buyingFor} : <span class="h4">${this.name}, ${this.address}</span><span class="s15">.</span></p>`;
+    nameEle[0].innerHTML = `<p class="s14" style="padding: 11pt 0;text-indent: 0pt;text-align: left;">${this.buyingFor} : <span class="h4">${this.name}, ${this.address}</span><span class="s15">.</span></p>`;
     /////////////////////////////////////////////////////////////////////////////
     // this.totalAmount = items.forEach(item => {
     //     let tempAmount += item[3];
@@ -65,7 +65,7 @@ var cusTableVisu = document.getElementById("visualizerTbl"); ///////////////////
 var nameEle = document.getElementsByClassName('nameDiv');
 
 
-Customer.prototype.createTbl = function (para1, para2) {
+Customer.prototype.createTbl = function () {
 
     this.subtotal = 0;
     cusTable0Body.innerHTML = '';
@@ -100,21 +100,21 @@ Customer.prototype.createTbl = function (para1, para2) {
     this.grandTotal = this.subtotal - this._discountAmount;
     // cusTable0Body.innerHTML = _val1;
     cusTable0.tFoot.innerHTML = `<tr>
-    <td class="QRSTD" id="td34" colspan="3" rowspan="4">
+    <td class="QRSTD" id="td34" colspan="2" rowspan="4">
               <div class="QRScon" id="qrcode-container">
                 <canvas class="QRS" id="qrcode" class="qrcode"></canvas>
               </div>
             </td>
-    <td>subtotal</td>
-    <td>${this.subtotal}</td>
+    <td colspan="2" >subtotal</td>
+    <td colspan="2" >${this.subtotal}</td>
     </tr>
     <tr>
-    <td>${this._discountAmount != 0 ? "less" : "No less"}</td> 
-                                <td>${this._discountAmount == 0 ? "-" : this._discountAmount}</td>
+    <td colspan="2" >${this._discountAmount != 0 ? "less" : "No less"}</td> 
+                                <td colspan="2" >${this._discountAmount == 0 ? "-" : this._discountAmount}</td>
                                 </tr>
                                 <tr>
-                                <td>Grand Total</td>
-                                <td class="double-underline">${this.grandTotal}</td>
+                                <td colspan="2" >Grand Total</td>
+                                <td colspan="2"  class="double-underline">${this.grandTotal}</td>
                                 </tr>`;
     // cusTable1.innerHTML = cusTable0.innerHTML;
     // document.getElementById("visTot").innerText = this.grandTotal;
@@ -219,7 +219,7 @@ Customer.prototype.final = function () {
     // // console.log('fetcfh dat',tmpfetchingFormDat);
     // // document.getElementById("rowdat").value = this.fetchingFormData;
     // todo make tag customer/office copy 
-    document.getElementsByClassName("copyOF")[0].innerHTML = "&#x2688;Customer Copy";
+    document.getElementsByClassName("copyOF")[0].innerHTML = "&#x2688;Customer Copy (Online)";
     // document.getElementsByClassName("copyOF")[1].innerHTML = "&#x2688;Office Copy"; 
 
 };
@@ -520,7 +520,9 @@ printToPage();
 
 // check if demo page to show
 var Is_Demo = new URLSearchParams(window.location.search).get("demo")?.toLowerCase() == 'true';
+// {"result":"success","mailRemains":98,"cRow":276,"resDat":["1LoU3nAHA7hbBcHnafqLHJDwWNJCYZB0P",276,"NAY277241126"]}
 if (Is_Demo)
-    window.location.replace("?id=1r655P4ooSv2T5uDyJ8JBhtdi2bDdJ0ik&inv=NAY275241119&row=274&me=em");
+    window.location.replace("?id=1LoU3nAHA7hbBcHnafqLHJDwWNJCYZB0P&inv=NAY277241126&row=276&me=em");
+    // window.location.replace("?id=1r655P4ooSv2T5uDyJ8JBhtdi2bDdJ0ik&inv=NAY275241119&row=274&me=em");
 // end demo
 
